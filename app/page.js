@@ -1,17 +1,3 @@
-// import Chat from '../components/Chat';
-
-// function Page() {
-//   const initialPrompt = '';
-
-//   return (
-//     <div>
-//       <Chat initialPrompt={initialPrompt} />
-//     </div>
-//   );
-// }
-
-// export default Page;
-
 'use client';
 
 import React, { useState } from 'react';
