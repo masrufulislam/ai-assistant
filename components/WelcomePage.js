@@ -1,102 +1,52 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  background-image: url(/akhi.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  @media (max-width: 768px) {
+    background-image: url(/akhiai.png);
+  }
+`;
+
+const Button = styled.button`
+  font-family: 'Times New Roman';
+  font-weight: bold;
+  position: absolute;
+  bottom: 27%;
+  right: 38%;
+  padding: 20px 40px;
+  font-size: 23px;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #33cccc 0%, #003366 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transform: translate(50%, 50%);
+
+  @media (max-width: 768px) {
+    bottom: 20%;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+`;
 
 const WelcomePage = ({ onStart }) => {
   return (
-    <div style={styles.container}>
-      <button onClick={onStart} style={styles.button}>
+    <Container>
+      <Button onClick={onStart}>
         Start Chat
-      </button>
-    </div>
+      </Button>
+    </Container>
   );
 };
 
-const styles = {
-  container: {
-    height: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'black',
-    backgroundImage: 'url(/akhi.png)',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    position: 'relative',
-    '@media (max-width: 768px)': {
-      backgroundImage: 'url(/akhiai.png)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-    },
-  },
-  button: {
-    fontFamily: 'Times New Roman',
-    fontWeight: 'bold',
-    position: 'absolute',
-    bottom: '27%',
-    right: '38%',
-    padding: '20px 40px',
-    fontSize: '23px',
-    cursor: 'pointer',
-    background: 'linear-gradient(to bottom, #33cccc 0%, #003366 100%)',
-    color: 'white',
-    border: 'none',
-    borderRadius: '5px',
-    transform: 'translate(50%, 50%)',
-  },
-};
-
 export default WelcomePage;
-
-// import React from 'react';
-// import { useRouter } from 'next/router';
-
-// const WelcomePage = () => {
-//   const router = useRouter();
-
-//   const handleStartChat = () => {
-//     router.push('/chat'); // Assuming the Chat page is located at /chat
-//   };
-
-//   return (
-//     <div style={styles.container}>
-//       <button onClick={handleStartChat} style={styles.button}>
-//         Start Chat
-//       </button>
-//     </div>
-//   );
-// };
-
-// const styles = {
-//   container: {
-//     height: '100vh',
-//     display: 'flex',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//     backgroundColor: 'black',
-//     backgroundImage: 'url(/akhi.png)',
-//     backgroundSize: 'cover',
-//     backgroundPosition: 'center',
-//     position: 'relative',
-//     '@media (max-width: 768px)': {
-//       backgroundImage: 'url(/akhiai.png)',
-//       backgroundSize: 'cover',
-//       backgroundPosition: 'center',
-//     },
-//   },
-//   button: {
-//     fontFamily: 'Times New Roman',
-//     fontWeight: 'bold',
-//     position: 'absolute',
-//     bottom: '27%',
-//     right: '38%',
-//     padding: '20px 40px',
-//     fontSize: '23px',
-//     cursor: 'pointer',
-//     background: 'linear-gradient(to bottom, #33cccc 0%, #003366 100%)',
-//     color: 'white',
-//     border: 'none',
-//     borderRadius: '5px',
-//     transform: 'translate(50%, 50%)',
-//   },
-// };
-
-// export default WelcomePage;
