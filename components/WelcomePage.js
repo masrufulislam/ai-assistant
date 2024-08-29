@@ -50,3 +50,5 @@ const WelcomePage = ({ onStart }) => {
 };
 
 export default WelcomePage;
+
+
